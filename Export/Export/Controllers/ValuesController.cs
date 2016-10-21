@@ -14,22 +14,24 @@ namespace Export.Controllers
     public class ValuesController : ApiController
     {
         [HttpGet]
-        public HttpResponseMessage Export(string type)
+        public HttpResponseMessage Export(string type, bool embeded)
         {            
             var sb = new StringBuilder();
             HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);            
             DataTable table = books.ToDataTable<Book>();
-            if (type == "csv")
+            byte[] content = type == "csv" ? table.ToCsv() : table.ToExcel();
+            result.Content = new ByteArrayContent(content);
+            
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+            if (!embeded)
             {
-                result.Content = new ByteArrayContent(table.ToCsv());
+                result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment"); //attachment will force download
+                result.Content.Headers.ContentDisposition.FileName = "RecordExport." + type;
             }
             else
             {
-                result.Content = new ByteArrayContent(table.ToExcel());
+                result.Content.Headers.ContentLength = content.Length;
             }
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-            result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment"); //attachment will force download
-            result.Content.Headers.ContentDisposition.FileName = "RecordExport."+ type;
 
             return result;
         }
