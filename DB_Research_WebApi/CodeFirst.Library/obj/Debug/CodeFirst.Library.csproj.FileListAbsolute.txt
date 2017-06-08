@@ -1,0 +1,8 @@
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\bin\Debug\CodeFirst.Library.dll.config
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\bin\Debug\CodeFirst.Library.dll
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\bin\Debug\CodeFirst.Library.pdb
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\bin\Debug\EntityFramework.dll
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\bin\Debug\EntityFramework.xml
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\obj\Debug\CodeFirst.Library.csprojResolveAssemblyReference.cache
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\obj\Debug\CodeFirst.Library.dll
+D:\Antony\Prakash\WebApi\DB_Research_WebApi\CodeFirst.Library\obj\Debug\CodeFirst.Library.pdb
