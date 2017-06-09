@@ -1,0 +1,2 @@
+https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url={{urlvalue}}&screenshot=true&strategy=mobile
+Research on this api for get information using web api
